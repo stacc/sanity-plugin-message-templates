@@ -1,6 +1,6 @@
 {
   "name": "@staccx/sanity-plugin-message-template",
-  "version": "1.0.3",
+  "version": "1.3.0",
   "description": "Message template document for Sanity",
   "author": "Stacc <espens@stacc.com>",
   "license": "MIT",
