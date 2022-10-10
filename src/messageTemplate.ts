@@ -22,10 +22,10 @@ export default {
       type: "string",
       options: {
         list: [
-          {title: "E-Mail", value: "email"},
-          {title: "SMS", value: "sms"}
+          { title: "E-Mail", value: "email" },
+          { title: "SMS", value: "sms" },
         ],
-      }
+      },
     },
     {
       type: "text",
@@ -37,7 +37,7 @@ export default {
       name: "body",
       title: "Body",
       of: [{ type: "block" }],
-      hidden: ({ parent }) => parent?.typeOfMessage === "sms"
+      hidden: ({ parent }: { parent: any }) => parent?.typeOfMessage === "sms",
     },
   ],
 };
