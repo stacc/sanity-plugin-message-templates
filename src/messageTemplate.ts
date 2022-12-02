@@ -36,7 +36,7 @@ export default {
       type: "array",
       name: "body",
       title: "Body",
-      of: [{ type: "block" }],
+      of: [{ type: "block" }, { type: "image" }],
       hidden: ({ parent }: { parent: any }) => parent?.typeOfMessage === "sms",
     },
   ],
