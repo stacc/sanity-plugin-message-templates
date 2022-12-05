@@ -22,10 +22,10 @@ export default {
       type: "string",
       options: {
         list: [
-          {title: "E-Mail", value: "email"},
-          {title: "SMS", value: "sms"}
+          { title: "E-Mail", value: "email" },
+          { title: "SMS", value: "sms" },
         ],
-      }
+      },
     },
     {
       type: "text",
@@ -36,8 +36,8 @@ export default {
       type: "array",
       name: "body",
       title: "Body",
-      of: [{ type: "block" }, {type: "image"}],
-      hidden: ({ parent }) => parent?.typeOfMessage === "sms"
+      of: [{ type: "block" }, { type: "image" }],
+      hidden: ({ parent }: { parent: any }) => parent?.typeOfMessage === "sms",
     },
   ],
 };
