@@ -1,0 +1,23 @@
+name: Release new version
+on:
+  push:
+    branches:
+      - main
+      - studioV3
+  workflow_dispatch:
+
+jobs:
+  version:
+    uses: stacc/github-workflow-actions/.github/workflows/version.yaml@main
+    secrets:
+      pat_token: ${{ secrets.PAT_TOKEN }}
+      npm_token: ${{ secrets.NPM_TOKEN }}
+      slack_release_bot_webhook: ${{ secrets.SLACK_RELEASE_BOT_WEBHOOK }}
+    with:
+      name: 'sanity-plugin-message-template'
+      npm-publish: true
+      pre-release-bash-script: |
+        npm ci
+      branches: |
+        [${{ github.ref }}]
+      slack-channel: "sanity-plugin-message-template-releases"
